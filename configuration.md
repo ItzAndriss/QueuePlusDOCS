@@ -1,11 +1,11 @@
-# Configuration
+# Konfiguráció
 
-QueuePlus stores all settings in `plugins/Queue/config.toml`.\
-This file uses the TOML format — similar to YAML but simpler.
+A QueuePlus minden beállítást a `plugins/Queue/config.toml` fájlban tárol.\
+Ez a fájl **TOML** formátumot használ — hasonló a YAML-hoz, de egyszerűbb.
 
 ***
 
-## Example Configuration
+## Példa konfiguráció
 
 {% code title="plugins/Queue/config.toml" %}
 ```toml
@@ -28,7 +28,7 @@ max-players = 70
 wait-after-restart = 30
 dev-permission = "queue.dev.mines"
 
-# multiple lobbies for /lobby command
+# több lobby a /lobby parancshoz
 [servers.lobbies]
 list = ["lobby1", "lobby2", "lobby3"]
 
@@ -38,63 +38,63 @@ max-level = 5
 permission-prefix = "queue.priority."
 
 [messages]
-# -- Base queue messages --
-queued = "§eYou are queued for §b{server}§e... (Position: §a{position}§e/{total})"
-queued-actionbar = "§eWaiting for §b{server}§e... §7({position}/{total})"
-joining = "§aConnecting to {server}..."
-requeued = "§e{server} is restarting, you have been added back to the queue."
-joining-lobby = "§aConnecting to §b{server}§a lobby..."
+# -- Alap várólista üzenetek --
+queued = "§eVárólistára kerültél a §b{server}§e szerverre... (Pozíció: §a{position}§e/{total})"
+queued-actionbar = "§eVárakozás a §b{server}§e szerverre... §7({position}/{total})"
+joining = "§aCsatlakozás a {server} szerverhez..."
+requeued = "§eA {server} újraindul, visszakerültél a várólistára."
+joining-lobby = "§aCsatlakozás a §b{server}§a lobbyhoz..."
 
-# -- Error / warning messages --
-server-down = "§cThe server is currently unavailable, please wait..."
-server-starting = "§eThe server is starting up... §7({remaining}s)"
-unknown-server = "§cUnknown server: {server}"
-same-server = "§eYou are already on {server}."
-queue-disabled = "§cThe queue is temporarily disabled for {server}!"
-queue-enabled = "§aQueue enabled for {server}!"
-no-lobby = "§cNo available lobby servers right now!"
+# -- Hiba / figyelmeztető üzenetek --
+server-down = "§cA szerver jelenleg nem elérhető, kérlek várj..."
+server-starting = "§eA szerver indul... §7({remaining}s)"
+unknown-server = "§cIsmeretlen szerver: {server}"
+same-server = "§eMár a {server} szerveren vagy."
+queue-disabled = "§cA várólista ideiglenesen le van tiltva ezen: {server}!"
+queue-enabled = "§aA várólista engedélyezve lett ezen: {server}!"
+no-lobby = "§cJelenleg nincs elérhető lobby szerver!"
 
-# -- Queue command messages --
-queue-usage = "§eUsage: /queue <server> | §7Available servers: {servers}"
-queue-reload = "§aQueue configuration reloaded!"
-unknown-command-server = "§cUnknown server: {server}"
-toggle-usage = "§eUsage: /{command} <server>"
+# -- Várólista parancs üzenetek --
+queue-usage = "§eHasználat: /queue <server> | §7Elérhető szerverek: {servers}"
+queue-reload = "§aA várólista konfiguráció újratöltve!"
+unknown-command-server = "§cIsmeretlen szerver: {server}"
+toggle-usage = "§eHasználat: /{command} <server>"
 
-# -- Developer mode (dev mode) --
-dev-usage = "§eUsage: /queuedev <server> <on/off>"
-dev-mode = "§eDeveloper mode for {server}: {status}"
-dev-status-on = "§aENABLED"
-dev-status-off = "§cDISABLED"
-dev-active = "§c{server} is in developer mode, you cannot join!"
-dev-permission = "§cOnly developers can join {server}."
+# -- Fejlesztői mód (dev mode) --
+dev-usage = "§eHasználat: /queuedev <server> <on/off>"
+dev-mode = "§eFejlesztői mód a {server} szerveren: {status}"
+dev-status-on = "§aENGEDÉLYEZVE"
+dev-status-off = "§cLETILTVA"
+dev-active = "§cA {server} fejlesztői módban van, nem csatlakozhatsz!"
+dev-permission = "§cCsak fejlesztők csatlakozhatnak a {server} szerverhez."
 
-# -- /leavequeue command --
-queue-left = "§aYou have left the queue!"
-queue-not-in = "§eYou are not in any queue."
+# -- /leavequeue parancs --
+queue-left = "§aKiléptél a várólistáról!"
+queue-not-in = "§eNem vagy egyetlen várólistán sem."
 
-# -- Other --
-server-unavailable = "§c{server} is currently unavailable."
+# -- Egyéb --
+server-unavailable = "§cA {server} jelenleg nem elérhető."
 ```
 {% endcode %}
 
 ***
 
-## Important Keys
+## Fontos kulcsok
 
-| Key                  | Description                                                              |
-| -------------------- | ------------------------------------------------------------------------ |
-| `max-players`        | The maximum number of players the backend server supports                |
-| `wait-after-restart` | How long to wait (in seconds) before players can reconnect after restart |
-| `dev-permission`     | Permission required to join a server while in developer mode             |
+| Kulcs                | Leírás                                                                     |
+| -------------------- | --------------------------------------------------------------------------- |
+| `max-players`        | A szerver által támogatott maximális játékosszám                           |
+| `wait-after-restart` | Mennyi ideig kell várni (másodpercben) újracsatlakozás előtt újraindítás után |
+| `dev-permission`     | Az engedély, amely szükséges a fejlesztői mód alatti csatlakozáshoz          |
 
 ***
 
-## Placeholders
+## Helyettesítők (placeholderek)
 
-| Placeholder   | Description                        |
-| ------------- | ---------------------------------- |
-| `{server}`    | Target server name                 |
-| `{position}`  | Player's position in queue         |
-| `{total}`     | Total queued players               |
-| `{remaining}` | Remaining seconds before available |
-| `{status}`    | Developer mode status (ON/OFF)     |
+| Helyettesítő | Leírás                                      |
+| ------------- | ------------------------------------------- |
+| `{server}`    | Célzott szerver neve                        |
+| `{position}`  | Játékos pozíciója a várólistán              |
+| `{total}`     | Összes várakozó játékos                     |
+| `{remaining}` | Hátralévő másodpercek az elérhetőségig      |
+| `{status}`    | Fejlesztői mód állapota (ENGEDÉLYEZVE/LETILTVA) |

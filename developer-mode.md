@@ -1,40 +1,36 @@
-# Developer mode
+# Fejlesztői mód
 
-Developer Mode is designed for testing or maintenance periods.\
-When active, only players with the correct permission can join a target server.
+A fejlesztői módot teszteléshez vagy karbantartási időszakokhoz tervezték.\
+Amikor aktív, csak a megfelelő jogosultsággal rendelkező játékosok csatlakozhatnak a cél szerverhez.
 
-## Usage
+## Használat
 
 ```bash
 /queuedev <server> on
 ```
 
-Only players with:
+Csak azok a játékosok csatlakozhatnak, akik rendelkeznek ezzel a jogosultsággal:
 
 ```
 queue.dev.<server>
 ```
 
-may connect.
-
-Use:
+A kikapcsoláshoz használd:
 
 ```bash
 /queuedev <server> off
 ```
 
-to disable it again.
+## Állapot mentése
 
-## Persistence
+A fejlesztői mód állapotai a `plugins/Queue/devmodes.toml` fájlban kerülnek mentésre.\
+Ezek az állapotok a proxy újraindítása után is megmaradnak.
 
-Developer mode states are saved to `plugins/Queue/devmodes.toml`.\
-These persist across proxy restarts.
-
-## Example Workflow
+## Példa munkafolyamat
 
 {% stepper %}
 {% step %}
-### Enable developer mode before updating
+### Fejlesztői mód engedélyezése frissítés előtt
 
 ```bash
 /queuedev survival on
@@ -42,15 +38,15 @@ These persist across proxy restarts.
 {% endstep %}
 
 {% step %}
-### Restart the backend server
+### Indítsd újra a háttérszervert
 {% endstep %}
 
 {% step %}
-### Test your changes safely — only devs can join
+### Teszteld a módosításokat biztonságosan — csak a fejlesztők csatlakozhatnak
 {% endstep %}
 
 {% step %}
-### Disable developer mode afterward
+### Kapcsold ki a fejlesztői módot, ha végeztél
 
 ```bash
 /queuedev survival off

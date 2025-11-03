@@ -1,46 +1,46 @@
-# Lobby balancer
+# Lobby terheléselosztó
 
-QueuePlus automatically routes players to the best lobby available.
+A QueuePlus automatikusan a legmegfelelőbb lobby szerverre irányítja a játékosokat.
 
 ***
 
-## Configuration
+## Konfiguráció
 
 ```toml
 [servers.lobbies]
 list = ["lobby1", "lobby2", "lobby3"]
 ```
 
-When a player uses `/lobby` or `/hub`, QueuePlus:
+Amikor egy játékos a `/lobby` vagy `/hub` parancsot használja, a QueuePlus a következő lépéseket hajtja végre:
 
 {% stepper %}
 {% step %}
-### Ping lobbies
+### Lobby-k pingelése
 
-Pings each lobby to check availability and responsiveness.
+Lepingi az összes lobbyt, hogy ellenőrizze azok elérhetőségét és válaszképességét.
 {% endstep %}
 
 {% step %}
-### Determine counts
+### Játékosszámok meghatározása
 
-Gathers current player counts from each lobby.
+Összegyűjti az aktuális játékosszámokat minden lobbyból.
 {% endstep %}
 
 {% step %}
-### Connect player
+### Játékos csatlakoztatása
 
-Connects the player to the least populated lobby.
+A játékost a legkevésbé telített lobby szerverre csatlakoztatja.
 {% endstep %}
 {% endstepper %}
 
 ***
 
-## Example
+## Példa
 
-If:
+Ha:
 
-* lobby1 = 40/100 players
-* lobby2 = 12/100 players
-* lobby3 = 25/100 players
+* lobby1 = 40/100 játékos
+* lobby2 = 12/100 játékos
+* lobby3 = 25/100 játékos
 
-Then `/lobby` will send the player to **lobby2** automatically.
+Akkor a `/lobby` parancs automatikusan a **lobby2** szerverre küldi a játékost.

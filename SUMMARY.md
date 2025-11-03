@@ -1,12 +1,12 @@
-# Table of contents
+# Tartalomjegyzék
 
-* [Introduction](README.md)
-* [Frequently Asked Questions](frequently-asked-questions.md)
-* [Commands](commands.md)
-* [Developer mode](developer-mode.md)
-* [Installation](installation.md)
-* [Lobby balancer](lobby-balancer.md)
-* [Permissions](permissions.md)
-* [Use cases](use-cases.md)
-* [Priority queue](priority-queue.md)
-* [Configuration](configuration.md)
+* [Bevezetés](README.md)
+* [Gyakran Ismételt Kérdések](frequently-asked-questions.md)
+* [Parancsok](commands.md)
+* [Fejlesztői mód](developer-mode.md)
+* [Telepítés](installation.md)
+* [Lobby terheléselosztó](lobby-balancer.md)
+* [Jogosultságok](permissions.md)
+* [Használati esetek](use-cases.md)
+* [Prioritásos várólista](priority-queue.md)
+* [Konfiguráció](configuration.md)

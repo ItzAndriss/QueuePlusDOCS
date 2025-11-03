@@ -1,30 +1,30 @@
-# Installation
+# Telepítés
 
-## Requirements
+## Követelmények
 
-* Velocity 3.2 or newer
-* Java 17 or newer
-* Optional: LuckPerms for queue priority integration
+* Velocity 3.2 vagy újabb verzió
+* Java 17 vagy újabb verzió
+* Opcionális: LuckPerms a várólista-prioritás integrációhoz
 
-## Installation Steps
+## Telepítési lépések
 
 {% stepper %}
 {% step %}
-### Download the plugin
+### A plugin letöltése
 
-Download the latest `QueuePlus.jar`.
+Töltsd le a legújabb `QueuePlus.jar` fájlt.
 {% endstep %}
 
 {% step %}
-### Install the plugin
+### A plugin telepítése
 
-Place it in your Velocity `plugins/` directory.
+Helyezd el a fájlt a Velocity `plugins/` könyvtárába.
 {% endstep %}
 
 {% step %}
-### Start the proxy once
+### Indítsd el egyszer a proxy-t
 
-Start the proxy once — this generates the configuration folder:
+Indítsd el egyszer a proxy-t — ez létrehozza a konfigurációs mappát:
 
 ```
 /plugins/Queue/
@@ -34,15 +34,15 @@ Start the proxy once — this generates the configuration folder:
 {% endstep %}
 
 {% step %}
-### Configure
+### Konfigurálás
 
-Edit `config.toml` to fit your setup (see the Configuration section).
+Szerkeszd a `config.toml` fájlt a saját beállításaid szerint (lásd a Konfiguráció részt).
 {% endstep %}
 
 {% step %}
-### Reload configuration
+### Konfiguráció újratöltése
 
-Run the following in-game or in-console to reload the configuration at runtime:
+Futtasd a következő parancsot játékban vagy konzolon a konfiguráció újratöltéséhez futásidőben:
 
 ```
 /queuereload
@@ -50,20 +50,20 @@ Run the following in-game or in-console to reload the configuration at runtime:
 {% endstep %}
 {% endstepper %}
 
-## Updating
+## Frissítés
 
-When updating, always:
+Frissítéskor mindig:
 
 {% stepper %}
 {% step %}
-Stop the proxy.
+Állítsd le a proxy-t.
 {% endstep %}
 
 {% step %}
-Replace the old `.jar` with the new one.
+Cseréld le a régi `.jar` fájlt az újjal.
 {% endstep %}
 
 {% step %}
-Start Velocity again — your configuration and devmodes are preserved.
+Indítsd újra a Velocity-t — a konfiguráció és a fejlesztői mód beállításai megmaradnak.
 {% endstep %}
 {% endstepper %}

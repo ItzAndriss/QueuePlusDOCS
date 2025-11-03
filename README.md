@@ -1,33 +1,33 @@
-# Introduction
+# Bevezetés
 
-QueuePlus is a modern, full-featured queue management plugin built for **Velocity** proxy networks.\
-It ensures smooth server transitions, prevents player spam during restarts, and manages advanced features like developer mode, priority queueing, and lobby load balancing.
-
-***
-
-## Why QueuePlus?
-
-Unlike basic queue plugins, QueuePlus provides:
-
-* Real-time ActionBar feedback for queued players
-* Automatic requeue after server restarts
-* LuckPerms-based priority handling
-* Developer-only access control (dev mode)
-* Configurable delay after restarts (e.g., 30s warmup)
-* Load-balanced multi-lobby routing
-* Fully customizable messages via `config.toml`
+A QueuePlus egy modern, teljes funkcionalitású várólista-kezelő plugin, amelyet **Velocity** proxy hálózatokhoz fejlesztettek ki.\
+Biztosítja a zökkenőmentes szerverváltást, megakadályozza a játékosok spamelését újraindítás közben, és kezeli a fejlett funkciókat, mint például a fejlesztői mód, a prioritásos várólista és a lobby terheléselosztás.
 
 ***
 
-## Overview
+## Miért a QueuePlus?
 
-| Feature           | Description                                         |
-| ----------------- | --------------------------------------------------- |
-| Smart Requeue     | Automatically re-adds players after server restarts |
-| Developer Mode    | Restrict access during maintenance or testing       |
-| Priority Queue    | LuckPerms integration for ranked queue access       |
-| Lobby Balancer    | Sends players to the least populated lobby          |
-| ActionBar Updates | Live feedback showing queue position and status     |
-| Configurable      | Every message and timing is editable                |
+A hagyományos várólista pluginokkal ellentétben a QueuePlus a következőket nyújtja:
 
-QueuePlus is designed to be production-ready for large-scale networks with minimal setup.
+* Valós idejű ActionBar visszajelzés a várólistán lévő játékosoknak
+* Automatikus visszahelyezés újraindítás után
+* LuckPerms alapú prioritáskezelés
+* Fejlesztőknek fenntartott hozzáférés (fejlesztői mód)
+* Konfigurálható késleltetés újraindítás után (pl. 30 másodperces bemelegítés)
+* Több lobby között terheléselosztás
+* Teljesen testreszabható üzenetek a `config.toml` fájlban
+
+***
+
+## Áttekintés
+
+| Funkció            | Leírás                                               |
+| ------------------ | ---------------------------------------------------- |
+| Okos újra-várólista | Automatikusan visszahelyezi a játékosokat újraindítás után |
+| Fejlesztői mód     | Hozzáférés korlátozása karbantartás vagy tesztelés alatt |
+| Prioritásos várólista | LuckPerms integráció rang alapú várólistához       |
+| Lobby terheléselosztás | A legkevésbé telített lobbyba irányítja a játékost |
+| ActionBar frissítések | Valós idejű visszajelzés a pozícióról és állapotról |
+| Konfigurálható     | Minden üzenet és időzítés szerkeszthető              |
+
+A QueuePlus úgy lett megtervezve, hogy nagy méretű hálózatokon is éles környezetben, minimális beállítással működjön.

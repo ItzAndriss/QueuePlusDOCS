@@ -1,22 +1,22 @@
-# Permissions
+# Jogosultságok
 
-| Permission           | Description                                      |
-| -------------------- | ------------------------------------------------ |
-| `queue.use`          | Allows using `/queue`                            |
-| `queue.leave`        | Allows `/leavequeue`                             |
-| `queue.admin`        | Grants access to admin commands                  |
-| `queue.dev.<server>` | Allows joining a specific server during dev mode |
-| `queue.priority.<n>` | Priority queue level (1–10)                      |
+| Jogosultság           | Leírás                                               |
+| --------------------- | ---------------------------------------------------- |
+| `queue.use`           | Engedélyezi a `/queue` parancs használatát           |
+| `queue.leave`         | Engedélyezi a `/leavequeue` parancs használatát      |
+| `queue.admin`         | Hozzáférést ad az admin parancsokhoz                 |
+| `queue.dev.<server>`  | Engedélyezi a csatlakozást egy adott szerverhez fejlesztői módban |
+| `queue.priority.<n>`  | Várólista prioritási szint (1–10)                    |
 
 {% hint style="info" %}
-Higher numbers = higher priority. Players with the same level are sorted by join order (FIFO).
+A magasabb szám magasabb prioritást jelent. Az azonos szintű játékosokat a csatlakozási sorrend (FIFO) alapján rendezi a rendszer.
 {% endhint %}
 
 ***
 
-## Priority Setup Example (LuckPerms)
+## Prioritás beállítási példa (LuckPerms)
 
-{% code title="LuckPerms: set group priorities" %}
+{% code title="LuckPerms: csoport prioritások beállítása" %}
 ```bash
 /lp group default permission set queue.priority.1 true
 /lp group vip permission set queue.priority.5 true
@@ -26,11 +26,11 @@ Higher numbers = higher priority. Players with the same level are sorted by join
 
 ***
 
-## Developer Mode Example
+## Fejlesztői mód példa
 
-If a server is in developer mode, only players with the matching dev permission can join.
+Ha egy szerver fejlesztői módban van, csak a megfelelő fejlesztői jogosultsággal rendelkező játékosok csatlakozhatnak.
 
-{% code title="LuckPerms: set user dev permission" %}
+{% code title="LuckPerms: felhasználói fejlesztői jogosultság beállítása" %}
 ```bash
 /lp user Andris permission set queue.dev.survival true
 ```

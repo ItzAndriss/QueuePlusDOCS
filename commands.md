@@ -1,44 +1,44 @@
-# Commands
+# Parancsok
 
-QueuePlus includes both player and admin commands.
+A QueuePlus játékos és admin parancsokat is tartalmaz.
 
 ***
 
-## Player Commands
+## Játékos parancsok
 
-| Command            | Description                            |
-| ------------------ | -------------------------------------- |
-| `/queue <server>`  | Adds you to a server queue             |
-| `/leavequeue`      | Removes you from your current queue    |
-| `/lobby` or `/hub` | Sends you to the least populated lobby |
+| Parancs              | Leírás                                      |
+| -------------------- | ------------------------------------------- |
+| `/queue <szerver>`   | Hozzáad a megadott szerver várólistájához  |
+| `/leavequeue`        | Eltávolít a jelenlegi várólistádról         |
+| `/lobby` vagy `/hub` | A legkevésbé telített lobby szerverre küld  |
 
-**Example:**
+**Példa:**
 
-{% code title="Player example" %}
+{% code title="Játékos példa" %}
 ```bash
 /queue survival
 
-# -> You are queued for survival (Position: 3/15)
+# -> A survival szerver várólistájára kerültél (Pozíciód: 3/15)
 ```
 {% endcode %}
 
 ***
 
-## Admin Commands
+## Admin parancsok
 
-| Command                     | Description                                   |
-| --------------------------- | --------------------------------------------- |
-| `/queuestart <server>`      | Enables the queue for a specific server       |
-| `/queuestop <server>`       | Disables queueing for that server             |
-| `/queuedev <server> on/off` | Toggles developer mode for a specific server  |
-| `/queuereload`              | Reloads the configuration and dev mode states |
+| Parancs                       | Leírás                                             |
+| ----------------------------- | -------------------------------------------------- |
+| `/queuestart <szerver>`       | Engedélyezi a várólistát az adott szerveren       |
+| `/queuestop <szerver>`        | Letiltja a várólistát az adott szerveren          |
+| `/queuedev <szerver> on/off`  | Fejlesztői mód ki- vagy bekapcsolása egy szerveren |
+| `/queuereload`                | Újratölti a konfigurációt és a fejlesztői mód állapotát |
 
-**Example:**
+**Példa:**
 
-{% code title="Admin example" %}
+{% code title="Admin példa" %}
 ```bash
 /queuedev skyblock on
 
-# -> Developer mode for skyblock is now ENABLED.
+# -> A skyblock szerver fejlesztői módja most ENGEDÉLYEZVE.
 ```
 {% endcode %}
