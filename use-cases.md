@@ -1,56 +1,56 @@
-# Use cases
+# Használati esetek
 
-Here’s how QueuePlus behaves in real server situations.
+Így viselkedik a QueuePlus valós szerverhelyzetekben.
 
 ***
 
-## Server Restart Example
+## Szerver újraindítás példa
 
 {% stepper %}
 {% step %}
-### Server restarts
+### A szerver újraindul
 
-`Kingdoms` server restarts.
+A `Kingdoms` szerver újraindul.
 {% endstep %}
 
 {% step %}
-### Disconnection detected
+### Kapcsolat bontásának észlelése
 
-QueuePlus detects disconnections via `KickedFromServerEvent`.
+A QueuePlus a `KickedFromServerEvent` eseményen keresztül érzékeli a kapcsolat megszakadását.
 {% endstep %}
 
 {% step %}
-### Players requeued
+### Játékosok visszahelyezése a várólistára
 
-Players are automatically requeued for `Kingdoms`.
+A játékosok automatikusan visszakerülnek a `Kingdoms` várólistájára.
 {% endstep %}
 
 {% step %}
-### Countdown shown
+### Visszaszámlálás megjelenítése
 
-Countdown appears in their ActionBar.
+A visszaszámlálás megjelenik az ActionBar felületén.
 {% endstep %}
 
 {% step %}
-### Reconnect after wait
+### Újracsatlakozás a várakozási idő után
 
-After `wait-after-restart` seconds, players reconnect.
+A `wait-after-restart` másodperc letelte után a játékosok automatikusan visszacsatlakoznak.
 {% endstep %}
 {% endstepper %}
 
 ***
 
 {% hint style="info" %}
-### Developer Testing
+### Fejlesztői tesztelés
 
-* Enable with: `/queuedev skyblock on` before maintenance.
-* Test server features without public players joining.
-* Disable later with: `/queuedev skyblock off`.
+* Engedélyezd ezzel: `/queuedev skyblock on` karbantartás előtt.
+* Teszteld a szerver funkcióit anélkül, hogy más játékosok csatlakozhatnának.
+* Később kapcsold ki ezzel: `/queuedev skyblock off`.
 {% endhint %}
 
 {% hint style="info" %}
-### Multi-Lobby Networks
+### Több-lobbis hálózatok
 
-* Use `[servers.lobbies]` to balance load.
-* Use `/lobby` to ensure new joins are distributed evenly.
+* Használd a `[servers.lobbies]` beállítást a terhelés elosztásához.
+* A `/lobby` parancs segítségével az új játékosok egyenletesen oszlanak el a lobbyk között.
 {% endhint %}

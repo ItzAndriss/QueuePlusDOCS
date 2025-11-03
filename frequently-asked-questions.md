@@ -1,41 +1,41 @@
-# Frequently Asked Questions
+# Gyakran Ismételt Kérdések
 
 <details>
 
-<summary>Does QueuePlus work with BungeeCord?</summary>
+<summary>Kompatibilis a QueuePlus a BungeeCorddal?</summary>
 
-No. It is designed for **Velocity** proxy only.
+Nem. A QueuePlus kizárólag **Velocity** proxyhoz készült.
 
 </details>
 
 <details>
 
-<summary>Can players be requeued automatically after restart?</summary>
+<summary>A játékosok automatikusan visszakerülnek a várólistára újraindítás után?</summary>
 
-Yes. When a server restarts, QueuePlus re-adds disconnected players to their queue automatically.
-
-</details>
-
-<details>
-
-<summary>Can I change every message?</summary>
-
-Yes. All text is fully configurable in `config.toml` under `[messages]`.
+Igen. Amikor egy szerver újraindul, a QueuePlus automatikusan visszahelyezi a bontott játékosokat a várólistára.
 
 </details>
 
 <details>
 
-<summary>How can I see which servers are queued?</summary>
+<summary>Minden üzenetet testre tudok szabni?</summary>
 
-You can list all configured servers using `/queue` tab completion.
+Igen. Az összes szöveg teljes mértékben konfigurálható a `config.toml` fájl `[messages]` szekciójában.
 
 </details>
 
 <details>
 
-<summary>What if a server is offline permanently?</summary>
+<summary>Hogyan tudom megnézni, mely szerverekhez van várólista?</summary>
 
-QueuePlus keeps players in queue and notifies them via ActionBar until it’s available again.
+A `/queue` parancs automatikus kiegészítése (tab completion) listázza az összes konfigurált szervert.
+
+</details>
+
+<details>
+
+<summary>Mi történik, ha egy szerver végleg offline marad?</summary>
+
+A QueuePlus a játékosokat a várólistán tartja, és az ActionBar üzenetein keresztül értesíti őket, amíg a szerver újra elérhetővé nem válik.
 
 </details>

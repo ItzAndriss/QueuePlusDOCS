@@ -1,32 +1,32 @@
-# Priority queue
+# Prioritásos várólista
 
-QueuePlus can integrate with LuckPerms to give specific ranks faster queue access.
+A QueuePlus integrálható a LuckPerms bővítménnyel, hogy bizonyos rangok gyorsabban jussanak sorra a várólistán.
 
-## How It Works
+## Működési elv
 
-Each player’s priority is determined by their highest matching permission:
+Minden játékos prioritása a legmagasabb érvényes jogosultsága alapján kerül meghatározásra:
 
 ```
 queue.priority.<n>
 ```
 
-Where `<n>` is an integer from **1 to 10** (1 = lowest, 10 = highest).
+Ahol `<n>` egy **1 és 10** közötti egész szám (1 = legalacsonyabb, 10 = legmagasabb).
 
-When multiple players are queued:
+Ha több játékos van a várólistán:
 
-* Higher priority players are placed ahead of lower priority ones.
-* Players with the same priority keep their position order (FIFO).
+* A magasabb prioritású játékosok előrébb kerülnek.
+* Az azonos prioritású játékosok a csatlakozási sorrend (FIFO) alapján maradnak rendezve.
 
-## Example
+## Példa
 
-| Player |          Permission | Position |
-| ------ | ------------------: | -------: |
-| Admin  | `queue.priority.10` |        1 |
-| Alex   |  `queue.priority.5` |        2 |
-| Steve  |  `queue.priority.1` |        3 |
+| Játékos |          Jogosultság | Pozíció |
+| ------- | -------------------: | -------: |
+| Admin   | `queue.priority.10`  |        1 |
+| Alex    |  `queue.priority.5`  |        2 |
+| Steve   |  `queue.priority.1`  |        3 |
 
-After re-sorting by priority, Admin goes first, then Alex, then Steve.
+A prioritás szerinti újrarendezés után az Admin kerül előre, majd Alex, végül Steve.
 
 {% hint style="info" %}
-If no permission system (like LuckPerms) is detected, QueuePlus defaults to FIFO (first-come, first-served).
+Ha nem található engedélykezelő rendszer (például LuckPerms), a QueuePlus alapértelmezetten a FIFO elvet alkalmazza (érkezési sorrend alapján).
 {% endhint %}
